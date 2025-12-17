@@ -8,6 +8,6 @@
 
 add_gitignore <- function(path = here::here()){
 	file.copy(
-		from = system.file("resources/file_templates/.gitignore", package = "breadcrumbs"),
+		from = system.file("resources/file_templates/.gitignore", package = "crumbsTADeduc3089"),
 		to = path)
 }

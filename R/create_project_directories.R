@@ -12,34 +12,18 @@ create_project_directories <- function(style = "default", license = "none", vign
   # extract project name for labeling cloud directory
   project_name <- basename( rstudioapi::getActiveProject() )
 
-  project_cloud_dir <- paste0("cloud_", project_name)
-
   # define directories
   default_template <-
     c("data", "script", "analysis", "R", "presentations", "support_files",
       fs::path("script", "R_script"),
       fs::path("script", "stata_do"),
+      fs::path("script", "python"),
       fs::path("analysis", "tables"),
       fs::path("analysis", "figures"),
       fs::path("analysis", "pdfs"),
       fs::path("analysis", "reports"),
       fs::path("data", "raw")
     )
-  learning_template <-
-    c("data", "script", "analysis", "R", "presentations", "support_files",
-      fs::path("script", "R_script"),
-      fs::path("script", "stata_do"),
-      fs::path("analysis", "tables"),
-      fs::path("analysis", "figures"),
-      fs::path("analysis", "pdfs"),
-      fs::path("analysis", "reports"),
-      fs::path("data", "raw"),
-      fs::path("vignette", "daily_log"),
-      fs::path("vignette", "exercises"),
-      fs::path("vignette", "summaries")
-    )
-  minimal_template <-
-    c("script", "analysis", "data", fs::path("data", "raw"))
 
   # populate project directory with files and subdirectories
   if (style == "default") {
@@ -48,16 +32,6 @@ create_project_directories <- function(style = "default", license = "none", vign
     breadcrumbs::add_readme(style = style)
     breadcrumbs::add_gitignore()
     file.create("README.md")
-  }
-  if (style == "learning") {
-    purrr::walk(learning_template, dir.create)
-    breadcrumbs::add_file_paths()
-    breadcrumbs::add_readme(style = style)
-    breadcrumbs::add_gitignore()
-  }
-  if (style == "minimal") {
-    purrr::walk(minimal_template, dir.create)
-    breadcrumbs::add_readme(style = style)
   }
 
   if (vignette == TRUE) {file.rename("analysis", "vignette")}

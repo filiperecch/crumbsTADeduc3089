@@ -1,10 +1,10 @@
-Package: breadcrumbs
+Package: crumbsTADeduc3089
 Type: Package
-Title: Breadcrumbs Helps You Maintain A Tidy Workflow During EDA
+Title: File structure for TAD EDUC 3089 at Pitt
 Version: 0.1.0
-Author: Joseph T. Powers
-Maintainer: Joseph T. Powers <joepowers16@gmail.com>
-Description: Breadcrumbs contains functions that support a tidy workflow, one that helps you stay organized by default rather than by Herculean efforts.
+Author: Filipe Recch (based on Joseph T. Powers breadcrumbs)
+Maintainer: Filipe Recch <filiperecch@gmail.com>
+Description: Creates a standardized project structure for data analysis projects
 License: MIT
 Encoding: UTF-8
 LazyData: true
