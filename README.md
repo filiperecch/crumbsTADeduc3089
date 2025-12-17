@@ -11,7 +11,7 @@ You can install the package directly from GitHub:
 ```r
 # install.packages("remotes")
 remotes::install_github("filiperecch/crumbsTADeduc3089")
-
+```
 Credits
 Maintainer: Filipe Recch (University of Pittsburgh)
 
