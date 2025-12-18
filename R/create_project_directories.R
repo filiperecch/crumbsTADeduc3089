@@ -28,9 +28,9 @@ create_project_directories <- function(style = "default", license = "none", vign
   # populate project directory with files and subdirectories
   if (style == "default") {
     purrr::walk(default_template, dir.create)
-    breadcrumbs::add_file_paths()
-    breadcrumbs::add_readme(style = style)
-    breadcrumbs::add_gitignore()
+    crumbsTADeduc3089::add_file_paths()
+    crumbsTADeduc3089::add_readme(style = style)
+    crumbsTADeduc3089::add_gitignore()
     file.create("README.md")
   }
 
@@ -38,5 +38,5 @@ create_project_directories <- function(style = "default", license = "none", vign
 
   if (license == "MIT") {usethis::use_mit_license()}
 
-  if (add_makefile == TRUE) {breadcrumbs::add_makefile()}
+  if (add_makefile == TRUE) {crumbsTADeduc3089::add_makefile()}
 }

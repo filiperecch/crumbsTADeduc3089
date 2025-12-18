@@ -8,7 +8,7 @@
 
 add_makefile <- function(path = here::here()){
 	file.copy(
-		from = system.file("resources/file_templates/Makefile", package = "breadcrumbs"),
+		from = system.file("resources/file_templates/Makefile", package = "crumbsTADeduc3089"),
 		to = path
 	)
 }
